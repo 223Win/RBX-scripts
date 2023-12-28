@@ -1,5 +1,5 @@
 local dex = game:GetObjects('rbxassetid://15777444980')[1]
-warn('your local 5 year old:', dex)
+
 dex.Name = game:GetService("HttpService"):GenerateGUID(false)
 dex.Parent = game:GetService("CoreGui")
 
@@ -9,4 +9,9 @@ dex.Parent = game:GetService("CoreGui")
 
 -- people are setting instances names to coregui making for a easy detection
 
-for i,v in pairs(dex:GetDescendants())do if v:IsA("BaseScript") then v.Enabled = true;end;end
+for i,v in pairs(dex:GetDescendants())do if v:IsA("LuaSourceContainer") then 
+		--v.Enabled = true;
+		-- gonna use sandbox loader cause its way better and this method sucks
+		task.spawn(setfenv(loadstring(v.Source, '='..v:GetFullName()),setmetatable({script = v},{__index = getfenv()})))
+	end;
+end;
