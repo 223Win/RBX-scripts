@@ -12,7 +12,7 @@ dex.Parent = game:GetService("CoreGui")
 
 -- please people using core gui use game:GetService('CoreGui')
 
--- people are setting instances names to coregui making for a easy detection
+-- people are setting instances names to coregui making for a easy detection because they can use instanceadded
 
 for i,v in pairs(dex:GetDescendants())do if v:IsA("LuaSourceContainer") then 
 		--v.Enabled = true;
