@@ -17,6 +17,7 @@ dex.Parent = game:GetService("CoreGui")
 for i,v in pairs(dex:GetDescendants())do if v:IsA("LuaSourceContainer") then 
 		--v.Enabled = true;
 		-- gonna use sandbox loader cause its way better and this method sucks
+		v.Enabled = true
 		coroutine.wrap(function()
 			task.spawn(setfenv(loadstring(v.Source, '='..v:GetFullName()),setmetatable({script = v},{__index = getfenv()})))
 		end)()
