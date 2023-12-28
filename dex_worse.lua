@@ -1,6 +1,6 @@
 warn('DEX V2 WORSE')
 warn('LOADING DEX')
-local dex = game:GetObjects('rbxassetid://15777444980')[1]
+local dex = game:GetObjects('rbxassetid://15778218268')[1]
 warn('FINISHED')
 wait(3)
 warn('EXECUTING DEX LAG MAY BE EXPERIENCED')
