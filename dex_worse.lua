@@ -1,5 +1,5 @@
 local dex = game:GetObjects('rbxassetid://15777444980')[1]
-
+warn('your local 5 year old:', dex)
 dex.Name = game:GetService("HttpService"):GenerateGUID(false)
 dex.Parent = game:GetService("CoreGui")
 
