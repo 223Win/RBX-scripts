@@ -1,4 +1,9 @@
+warn('DEX V1 WORSE')
+warn('LOADING DEX')
 local dex = game:GetObjects('rbxassetid://15777444980')[1]
+warn('FINISHED')
+wait(3)
+warn('EXECUTING DEX LAG MAY BE EXPERIENCED')
 
 dex.Name = game:GetService("HttpService"):GenerateGUID(false)
 dex.Parent = game:GetService("CoreGui")
